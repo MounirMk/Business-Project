@@ -1,8 +1,5 @@
 import java.util.Scanner;
-import java.sql.Date;
  
-frame.add(datePicker);
-
 class Product {
     private String name;
     private double price;
@@ -39,12 +36,7 @@ class Order {
         System.out.print("Enter quantity: ");
         double quantity = input.nextInt();
 
-        System.out.print("Enter delivery date (yyyy-MM-dd): ");
-        String deliveryDateString = input.next();
-        Date deliveryDate = Date.valueOf(deliveryDateString);
-
-      System.out.println("Order placed for " + quantity + " units of " + selectedProduct.getName() 
-                           + " with delivery date " + deliveryDate + " Total cost: $" + 
-                           selectedProduct.getPrice()*1.0*quantity + " \nThank you for shopping with us!");
+        System.out.println("Order placed for " + quantity + " units of " + selectedProduct.getName() 
+                           + " Total cost: $" + selectedProduct.getPrice()*1.0*quantity + " \nThank you for shopping with us!");
     }
 }
